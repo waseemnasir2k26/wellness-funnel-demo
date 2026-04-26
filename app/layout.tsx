@@ -17,56 +17,61 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Phoenix Wellness — Rise Again",
-  description: "A wellness journey from burnout to balance. Free 7-day reset, quiz, guide, programme & book.",
+  title: "Phoenix Wellness — Like a phoenix, I rise.",
+  description: "A wellness journey from burnout to balance. Free 7-day reset, archetype quiz, £27 guide, 12-week programme & the book.",
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full antialiased`}>
-      <body className="min-h-full flex flex-col">
-        <header className="sticky top-0 z-50 backdrop-blur bg-cream/80 border-b border-sage-deep/10">
-          <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="serif text-2xl text-sage-deep">Phoenix</span>
-              <span className="text-xs uppercase tracking-[0.2em] text-ink-soft hidden sm:inline">Wellness</span>
+    <html lang="en" className={`${fraunces.variable} ${inter.variable} h-full`}>
+      <body className="min-h-full flex flex-col bg-cream-warm">
+        <header className="sticky top-0 z-50 backdrop-blur-md bg-cream-warm/80 border-b border-sage-deep/8">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-5 flex items-center justify-between">
+            <Link href="/" className="flex items-baseline gap-2 group">
+              <span className="serif text-2xl text-sage-deep group-hover:text-gold transition-colors">Phoenix</span>
+              <span className="text-[10px] uppercase tracking-[0.3em] text-ink-muted hidden sm:inline">Wellness</span>
             </Link>
-            <nav className="hidden md:flex items-center gap-8 text-sm">
-              <Link href="/reset" className="hover:text-sage-deep transition">7-Day Reset</Link>
-              <Link href="/quiz" className="hover:text-sage-deep transition">Quiz</Link>
-              <Link href="/guide" className="hover:text-sage-deep transition">£27 Guide</Link>
-              <Link href="/programme" className="hover:text-sage-deep transition">Programme</Link>
-              <Link href="/book" className="hover:text-sage-deep transition">Book</Link>
+            <nav className="hidden md:flex items-center gap-9 text-[13px] font-medium">
+              <Link href="/reset" className="hover:text-sage-deep transition-colors">7-Day Reset</Link>
+              <Link href="/quiz" className="hover:text-sage-deep transition-colors">Quiz</Link>
+              <Link href="/guide" className="hover:text-sage-deep transition-colors">Guide</Link>
+              <Link href="/programme" className="hover:text-sage-deep transition-colors">Programme</Link>
+              <Link href="/book" className="hover:text-sage-deep transition-colors">Book</Link>
             </nav>
-            <Link href="/reset" className="btn-primary text-sm hidden sm:inline-flex">Free Reset</Link>
+            <Link href="/reset" className="btn-primary text-xs px-5 py-2.5 hidden sm:inline-flex">Free Reset</Link>
           </div>
         </header>
 
         <main className="flex-1">{children}</main>
 
-        <footer className="border-t border-sage-deep/10 mt-24 bg-cream-deep/40">
-          <div className="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-3 gap-8 text-sm">
-            <div>
-              <div className="serif text-2xl text-sage-deep mb-2">Phoenix Wellness</div>
-              <p className="text-ink-soft leading-relaxed">A wellness journey from burnout to balance. Like a phoenix, you rise.</p>
+        <footer className="border-t border-sage-deep/10 mt-32 bg-cream-deep/30">
+          <div className="max-w-7xl mx-auto px-6 lg:px-10 py-16 grid md:grid-cols-4 gap-10 text-sm">
+            <div className="md:col-span-2">
+              <div className="serif text-3xl text-sage-deep mb-3">Phoenix Wellness</div>
+              <p className="text-ink-soft leading-relaxed max-w-sm">
+                A wellness journey from burnout to balance. Like a phoenix, you rise — not by force, but by design.
+              </p>
+              <div className="hairline-gold my-6 max-w-sm" />
+              <p className="serif italic text-gold text-lg">Like a phoenix, I rise.</p>
             </div>
             <div>
-              <div className="eyebrow mb-3">Explore</div>
-              <ul className="space-y-2">
-                <li><Link href="/reset" className="hover:text-sage-deep">7-Day Reset</Link></li>
-                <li><Link href="/quiz" className="hover:text-sage-deep">Wellness Quiz</Link></li>
-                <li><Link href="/guide" className="hover:text-sage-deep">£27 Guide</Link></li>
-                <li><Link href="/programme" className="hover:text-sage-deep">Programme</Link></li>
-                <li><Link href="/book" className="hover:text-sage-deep">Book</Link></li>
+              <div className="eyebrow-sage mb-4">Explore</div>
+              <ul className="space-y-2.5">
+                <li><Link href="/reset" className="hover:text-sage-deep transition-colors">7-Day Reset</Link></li>
+                <li><Link href="/quiz" className="hover:text-sage-deep transition-colors">Wellness Quiz</Link></li>
+                <li><Link href="/guide" className="hover:text-sage-deep transition-colors">£27 Guide</Link></li>
+                <li><Link href="/programme" className="hover:text-sage-deep transition-colors">12-Week Programme</Link></li>
+                <li><Link href="/book" className="hover:text-sage-deep transition-colors">The Book</Link></li>
               </ul>
             </div>
             <div>
-              <div className="eyebrow mb-3">Connect</div>
-              <p className="text-ink-soft">hello@phoenix-wellness.com</p>
-              <p className="text-ink-soft mt-4 text-xs">© 2026 Phoenix Wellness. All rights reserved.</p>
-              <p className="text-ink-soft mt-2 text-xs italic">Demo build by SkynetLabs.</p>
+              <div className="eyebrow-sage mb-4">Connect</div>
+              <p className="text-ink-soft mb-2">hello@phoenix-wellness.com</p>
+              <p className="text-ink-soft mb-6">@phoenix.wellness</p>
+              <p className="text-ink-muted text-xs">© 2026 Phoenix Wellness</p>
+              <p className="text-ink-muted mt-1 text-xs italic">Demo build · SkynetLabs</p>
             </div>
           </div>
         </footer>
