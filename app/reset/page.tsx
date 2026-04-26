@@ -26,18 +26,18 @@ export default function Reset() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image src={HERO} alt="Lit candle in soft morning light" fill className="object-cover" priority sizes="100vw" />
-          <div className="absolute inset-0 bg-gradient-to-r from-cream-warm via-cream-warm/85 to-cream-warm/30" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(244,204,196,0.95) 0%, rgba(253,249,241,0.85) 50%, rgba(240,194,177,0.4) 100%)" }} />
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 pt-20 pb-24 md:pt-28 md:pb-36">
           <div className="max-w-xl fade-up">
             <div className="eyebrow mb-6">Free · No card · Begin tomorrow</div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.05] text-balance">
-              The 7-Day <em className="text-sage-deep">Reset</em>.
+              The 7-Day <em className="text-terracotta">Reset</em>.
             </h1>
             <p className="text-lg text-ink-soft leading-relaxed mb-2 max-w-md">
               Seven gentle mornings. One small ritual a day. Delivered with care.
             </p>
-            <p className="serif italic text-gold mt-6 text-lg">A soft start, not another sprint.</p>
+            <p className="serif italic text-saffron mt-6 text-lg">A soft start, not another sprint.</p>
           </div>
         </div>
       </section>
@@ -56,8 +56,8 @@ export default function Reset() {
                   <Image src={d.img} alt={d.t} fill className="object-cover img-zoom" sizes="120px" />
                 </div>
                 <div className="flex-1">
-                  <div className="text-gold serif text-sm tracking-wider mb-1">{d.d}</div>
-                  <div className="serif text-2xl md:text-[1.6rem] mb-1 group-hover:text-sage-deep transition-colors">{d.t}</div>
+                  <div className="text-saffron serif text-sm tracking-wider mb-1">{d.d}</div>
+                  <div className="serif text-2xl md:text-[1.6rem] mb-1 group-hover:text-terracotta transition-colors">{d.t}</div>
                   <div className="text-sm text-ink-soft">{d.s}</div>
                 </div>
               </div>
@@ -72,8 +72,8 @@ export default function Reset() {
 
               {submitted ? (
                 <div className="text-center py-8 relative">
-                  <div className="serif italic text-gold text-sm tracking-widest mb-3">WELCOME, RISER</div>
-                  <div className="serif text-4xl text-sage-deep mb-4">You&apos;re in.</div>
+                  <div className="serif italic text-saffron text-sm tracking-widest mb-3">WELCOME, RISER</div>
+                  <div className="serif text-4xl text-terracotta mb-4">You&apos;re in.</div>
                   <p className="text-ink-soft">Day 1 lands tomorrow morning. Soft start.</p>
                 </div>
               ) : (
@@ -103,9 +103,9 @@ export default function Reset() {
                   <div className="hairline my-6" />
 
                   <div className="text-xs text-ink-muted space-y-1.5">
-                    <div className="flex items-center gap-2"><span className="text-sage-deep">✓</span> Free forever, no card</div>
-                    <div className="flex items-center gap-2"><span className="text-sage-deep">✓</span> One short email per day</div>
-                    <div className="flex items-center gap-2"><span className="text-sage-deep">✓</span> Unsubscribe in one click</div>
+                    <div className="flex items-center gap-2"><span className="text-saffron">✓</span> Free forever, no card</div>
+                    <div className="flex items-center gap-2"><span className="text-saffron">✓</span> One short email per day</div>
+                    <div className="flex items-center gap-2"><span className="text-saffron">✓</span> Unsubscribe in one click</div>
                   </div>
 
                   <p className="text-xs text-ink-soft mt-6 text-center">

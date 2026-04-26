@@ -23,7 +23,7 @@ export default function Guide() {
           <div className="md:col-span-6 fade-up">
             <div className="eyebrow mb-6">£27 · Instant download · 60 pages</div>
             <h1 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-[1.05] text-balance">
-              The <em className="text-sage-deep">Rise</em> Guide.
+              The <em className="text-terracotta">Rise</em> Guide.
             </h1>
             <p className="text-lg text-ink-soft leading-relaxed mb-8 max-w-md">
               Sixty pages. Archetype-matched. The exact rituals, plates, and practices for your wellness pattern. No padding. No filler.
@@ -49,7 +49,7 @@ export default function Guide() {
                   <div className="serif text-5xl md:text-6xl italic">Rise.</div>
                 </div>
               </div>
-              <div className="absolute -top-6 -right-6 bg-gold text-cream-warm rounded-full w-24 h-24 flex flex-col items-center justify-center shadow-xl rotate-[8deg]">
+              <div className="absolute -top-6 -right-6 rounded-full w-28 h-28 flex flex-col items-center justify-center shadow-2xl rotate-[8deg] float" style={{ background: "linear-gradient(135deg, #e87f1c, #c8674a)", color: "#fdf9f1" }}>
                 <div className="text-[10px] tracking-widest">FROM</div>
                 <div className="serif text-2xl">£27</div>
               </div>
@@ -63,7 +63,7 @@ export default function Guide() {
         <div className="grid md:grid-cols-12 gap-12 items-start">
           <div className="md:col-span-5">
             <div className="eyebrow mb-5">What&apos;s inside</div>
-            <h2 className="text-4xl md:text-5xl mb-6 text-balance">A real playbook, <em className="text-gold">not another mindset deck.</em></h2>
+            <h2 className="text-4xl md:text-5xl mb-6 text-balance">A real playbook, <em className="text-saffron">not another mindset deck.</em></h2>
             <p className="text-ink-soft text-lg leading-relaxed mb-8">
               Six chapters. Zero fluff. Every page earns its place.
             </p>
@@ -74,7 +74,7 @@ export default function Guide() {
           <div className="md:col-span-7 grid sm:grid-cols-2 gap-4">
             {INSIDE.map((b, i) => (
               <div key={b.t} className={`card ${i % 2 === 1 ? "sm:translate-y-6" : ""}`}>
-                <div className="text-gold serif text-xl mb-3">0{i + 1}</div>
+                <div className="text-terracotta serif text-2xl mb-3">0{i + 1}</div>
                 <div className="serif text-xl mb-2">{b.t}</div>
                 <p className="text-ink-soft leading-relaxed text-sm">{b.d}</p>
               </div>
@@ -105,7 +105,7 @@ export default function Guide() {
           <div className="absolute -bottom-16 -left-16 w-48 h-48 rounded-full bg-sage-soft/30 blur-2xl" />
           <div className="relative">
             <div className="eyebrow mb-3">Buy the guide</div>
-            <div className="serif text-7xl mb-2 text-sage-deep">£27</div>
+            <div className="serif text-7xl mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #e87f1c, #6e3d4f)", WebkitBackgroundClip: "text" }}>£27</div>
             <p className="text-ink-soft mb-8">One payment. Lifetime access. Instant download.</p>
             <button className="btn-gold w-full">Pay with card · £27</button>
             <p className="text-xs text-ink-muted mt-4 italic">Demo button. Real Stripe wired on production build.</p>

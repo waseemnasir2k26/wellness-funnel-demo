@@ -114,7 +114,7 @@ export default function Quiz() {
         <>
           <div className="text-center mb-12 fade-up">
             <div className="eyebrow mb-5">The Wellness Archetype Quiz · 90 seconds</div>
-            <h1 className="text-5xl md:text-6xl mb-5 text-balance">Which <em className="text-sage-deep">fire</em> are you?</h1>
+            <h1 className="text-5xl md:text-6xl mb-5 text-balance">Which <em className="text-saffron">fire</em> are you?</h1>
             <p className="text-ink-soft text-lg">Five questions. One archetype. A clear next step.</p>
           </div>
 
@@ -125,10 +125,13 @@ export default function Quiz() {
                 <span>Question {step + 1} of {QUESTIONS.length}</span>
                 <span>{Math.round(((step) / QUESTIONS.length) * 100)}%</span>
               </div>
-              <div className="w-full bg-sage-soft/40 rounded-full h-[2px] mb-10 overflow-hidden">
+              <div className="w-full bg-sage-soft/40 rounded-full h-[3px] mb-10 overflow-hidden">
                 <div
-                  className="bg-sage-deep h-[2px] rounded-full transition-all duration-500"
-                  style={{ width: `${((step) / QUESTIONS.length) * 100}%` }}
+                  className="h-[3px] rounded-full transition-all duration-500"
+                  style={{
+                    width: `${((step) / QUESTIONS.length) * 100}%`,
+                    background: "linear-gradient(to right, #e87f1c, #c8674a, #6e3d4f)",
+                  }}
                 />
               </div>
 
@@ -141,8 +144,8 @@ export default function Quiz() {
                     onClick={() => pick(opt.v)}
                     className="w-full text-left px-6 py-5 rounded-2xl border border-sage-deep/15 hover:border-sage-deep hover:bg-cream-deep/30 transition-all duration-300 group flex items-center gap-4"
                   >
-                    <span className="w-2 h-2 rounded-full bg-sage-deep/30 group-hover:bg-gold transition-colors" />
-                    <span className="group-hover:text-sage-deep transition-colors">{opt.t}</span>
+                    <span className="w-2 h-2 rounded-full bg-sage-deep/30 group-hover:bg-saffron transition-colors" />
+                    <span className="group-hover:text-terracotta transition-colors">{opt.t}</span>
                   </button>
                 ))}
               </div>
@@ -155,9 +158,9 @@ export default function Quiz() {
             <Image src={result.img} alt={result.name} fill className="object-cover" sizes="100vw" priority />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-ink/20 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12 text-cream-warm text-left">
-              <div className="eyebrow text-gold-soft mb-3">Your archetype</div>
-              <h1 className="text-5xl md:text-7xl mb-2 leading-none">{result.name}</h1>
-              <p className="text-cream-warm/80 text-sm tracking-widest uppercase">{result.tag}</p>
+              <div className="eyebrow mb-3" style={{ color: "#f3dba8" }}>Your archetype</div>
+              <h1 className="text-5xl md:text-7xl mb-2 leading-none" style={{ color: "#fdf9f1" }}>{result.name}</h1>
+              <p className="text-cream-warm/80 text-sm tracking-widest uppercase" style={{ color: "#f3dba8" }}>{result.tag}</p>
             </div>
           </div>
 

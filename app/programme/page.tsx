@@ -37,7 +37,7 @@ export default function Programme() {
         <div className="max-w-4xl mx-auto px-6 pt-24 pb-20 md:pt-32 md:pb-28 text-center">
           <div className="eyebrow mb-6 fade-up">12-week programme · Cohort 9 opens June</div>
           <h1 className="text-5xl md:text-7xl mb-6 leading-[1.05] text-balance fade-up-d1">
-            The <em className="text-sage-deep">Rise</em> Programme.
+            The <em className="text-terracotta">Rise</em> Programme.
           </h1>
           <p className="text-lg text-ink-soft leading-relaxed max-w-2xl mx-auto mb-10 fade-up-d2">
             Eight modules. Twelve weeks. Live coaching. A small cohort of risers walking the path with you. This is the deep work.
@@ -53,7 +53,7 @@ export default function Programme() {
       <section className="max-w-7xl mx-auto px-6 lg:px-10 py-24">
         <div className="text-center mb-16 max-w-2xl mx-auto">
           <div className="eyebrow mb-5">The modules</div>
-          <h2 className="text-4xl md:text-5xl text-balance">Eight modules. <em className="text-gold">One return home.</em></h2>
+          <h2 className="text-4xl md:text-5xl text-balance">Eight modules. <em className="text-saffron">One return home.</em></h2>
         </div>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-5">
           {MODULES.map((m, i) => (
@@ -62,8 +62,8 @@ export default function Programme() {
               className="card group"
               style={{ animationDelay: `${i * 50}ms` }}
             >
-              <div className="text-gold serif text-3xl mb-3">{m.n}</div>
-              <div className="serif text-2xl mb-2 group-hover:text-sage-deep transition-colors">{m.t}</div>
+              <div className="serif text-4xl mb-3 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #e87f1c, #c8674a)", WebkitBackgroundClip: "text" }}>{m.n}</div>
+              <div className="serif text-2xl mb-2 group-hover:text-terracotta transition-colors">{m.t}</div>
               <p className="text-ink-soft leading-relaxed text-sm">{m.d}</p>
             </div>
           ))}
@@ -80,7 +80,7 @@ export default function Programme() {
           </div>
           <div className="md:col-span-7">
             <div className="eyebrow mb-5">Meet your coach</div>
-            <h2 className="text-4xl md:text-5xl mb-6 text-balance">A guide who has <em className="text-sage-deep">walked the way.</em></h2>
+            <h2 className="text-4xl md:text-5xl mb-6 text-balance">A guide who has <em className="text-terracotta">walked the way.</em></h2>
             <p className="text-lg text-ink-soft leading-relaxed mb-5">
               I was the woman in the corner office at 6am, on her third coffee, her first migraine, her hundredth resentment. I burned. I rose. I learned how. The programme is what I would have given that woman.
             </p>
@@ -88,7 +88,7 @@ export default function Programme() {
               Now, certified in nutritional therapy, somatic practice, and psychosynthesis — I walk the path beside you, not in front of you.
             </p>
             <div className="hairline-gold mb-6 max-w-xs" />
-            <p className="serif italic text-gold text-xl">— Phoenix, founder &amp; coach</p>
+            <p className="serif italic text-saffron text-xl">— Phoenix, founder &amp; coach</p>
           </div>
         </div>
       </section>
@@ -97,12 +97,12 @@ export default function Programme() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 -z-10">
           <Image src={COMMUNITY} alt="" fill className="object-cover" sizes="100vw" />
-          <div className="absolute inset-0 bg-sage-darker/90" />
+          <div className="absolute inset-0" style={{ background: "linear-gradient(135deg, rgba(32,41,31,0.95) 0%, rgba(110,61,79,0.92) 100%)" }} />
         </div>
         <div className="max-w-7xl mx-auto px-6 lg:px-10 py-24 md:py-28">
           <div className="text-center mb-16 max-w-2xl mx-auto">
-            <div className="eyebrow mb-5 text-gold-soft">What you get</div>
-            <h2 className="text-4xl md:text-5xl text-cream-warm text-balance">Inside the <em className="text-gold-soft">programme.</em></h2>
+            <div className="eyebrow mb-5" style={{ color: "#e6b252" }}>What you get</div>
+            <h2 className="text-4xl md:text-5xl text-cream-warm text-balance">Inside the <em style={{ color: "#f3dba8" }}>programme.</em></h2>
           </div>
           <div className="grid md:grid-cols-3 gap-5">
             {INCLUDES.map((p) => (
@@ -121,7 +121,7 @@ export default function Programme() {
           <div className="absolute -top-16 -right-16 w-48 h-48 rounded-full bg-gold-soft/30 blur-2xl" />
           <div className="relative">
             <div className="eyebrow mb-3">Investment</div>
-            <div className="serif text-7xl mb-2 text-sage-deep">£1,997</div>
+            <div className="serif text-7xl mb-2 bg-clip-text text-transparent" style={{ backgroundImage: "linear-gradient(135deg, #e87f1c, #6e3d4f)", WebkitBackgroundClip: "text" }}>£1,997</div>
             <p className="text-ink-soft mb-8">Or three payments of £697.</p>
             <button className="btn-primary w-full">Apply for Cohort 9</button>
             <p className="text-xs text-ink-muted mt-4 italic">Application required. Limited to 24 risers per cohort.</p>
